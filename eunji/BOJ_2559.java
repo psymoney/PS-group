@@ -34,5 +34,6 @@ public class BOJ_2559 {
 		}
 		
 		System.out.print(max);
+	
 	}
 }
