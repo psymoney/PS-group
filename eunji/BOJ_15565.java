@@ -38,7 +38,6 @@ public class BOJ_15565 {
 			len = end++ -start++ +1;
 			min=Math.min(min, len);
 			
-			// if(start>=N  || end>=N) break;
 			while(start<N && arr[start]!=1) start++;
 			while(end<N && arr[end]!=1) end++;
 			
