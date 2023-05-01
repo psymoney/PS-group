@@ -16,6 +16,7 @@ public class BOJ_2512 {
 		for(int i=0;i<N;i++) {
 			arr[i]=Integer.parseInt(str[i]);
 		}
+	
 		
 		Arrays.sort(arr);
 		
@@ -41,7 +42,6 @@ public class BOJ_2512 {
 				break;
 			}
 		}
-		
 		System.out.print(r);
 	}
 }
