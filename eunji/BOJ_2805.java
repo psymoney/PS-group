@@ -30,7 +30,10 @@ public class BOJ_2805 {
 			
 			if(sum>M) l=mid+1;
 			else if(sum<M) r=mid-1;
-			else {r=mid; break;}
+			else {
+				r=mid;
+				break;
+				}
 		}
 		
 		System.out.println(r);
