@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class BOJ_1654 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		String str[] = br.readLine().split(" ");
 		
 		int K = Integer.parseInt(str[0]);
@@ -15,6 +16,7 @@ public class BOJ_1654 {
 		for(int i=0;i<K;i++) {
 			arr[i]=Integer.parseInt(br.readLine());
 		}
+		
 		Arrays.sort(arr);
 		
 		int cnt=0;
