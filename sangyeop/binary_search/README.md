@@ -3,7 +3,7 @@
 - 시간복잡도: O(log n)
 
 ### 주의 사항
-- Overflow: mid pointer 계산 시, 다음과 같이 계산하는 경우 int 자료형 최대값 초과로 인해 오버플로가 발생할 수 있다.
+- Overflow: mid pointer 계산 시, 다음과 같이 계산하는 경우 int 자료형 최대값 초과로 인해 오버플로가 발생할 수 있다. (excl. Python)
 ```python
 mid = (left + right) // 2
 ```
