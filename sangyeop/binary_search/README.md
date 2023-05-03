@@ -15,6 +15,22 @@ mid = left + (right - left) // 2
 
 ### 풀이 방법
 1. 반복
+```python
+def iteration(sorted_array, target) -> int:
+    l, r = 0, len(sorted_array)
+    
+    while l <= r:
+        m = l + (r - l) // 2
+        
+        if sorted_array[m] == target:
+            return m
+        elif sorted_array[mid] < target:
+            l = m + 1
+        else:
+            r = m - 1
+            
+     return -1
+```
 2. 재귀
 ```python
 def recursive(l, r, sorted_array, target) -> int:
