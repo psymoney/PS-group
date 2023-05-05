@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class BOJ_16401 {
 	public static void main(String[] args) throws IOException{
@@ -16,22 +17,25 @@ public class BOJ_16401 {
 			arr[i]=Integer.parseInt(arr_str[i]);
 		}
 		
+		Arrays.sort(arr);
+		
 		int min=1;
 		int max=arr[N-1];
 		int mid=(min+max)/2;
 		int cnt=0;
 		
-		while(min<max) {
+		while(min<=max) {
 			cnt=0;
 			mid=(min+max)/2;
+			if(mid==0) {
+				max=0;
+				break;
+			}
 			for(int i=0;i<N;i++) {
 				cnt+=arr[i]/mid;
 			}
 			
-			if(cnt<M) {
-				max=mid-1;
-				if(max==0) break;
-			}	
+			if(cnt<M) max=mid-1;
 			else min=mid+1;
 		}
 		
