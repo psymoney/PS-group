@@ -8,10 +8,10 @@ public class BOJ_3079 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
 		String str[] = br.readLine().split(" ");
-		long N = Long.parseLong(str[0]);
+		int N = Integer.parseInt(str[0]);
 		long M = Long.parseLong(str[1]);
 		
-		long arr[]= new long[(int)N];
+		long arr[]= new long[N];
 		for(int i=0;i<N;i++) {
 			arr[i]=Long.parseLong(br.readLine());
 		}
@@ -19,20 +19,22 @@ public class BOJ_3079 {
 		Arrays.sort(arr);
 		
 		long min = 1;
-		long max = arr[(int)N-1]*M;
+		long max = arr[N-1]*M;
 		long mid = (min+max)/2;
 		long cnt = 0;
-		long ans = mid;
+		long ans = max;
 		while(min<=max) {
 			cnt = 0;
 			mid = (min+max)/2;
 			
 			for(int i=0;i<N;i++) {
+				if(cnt>=M || arr[i]>mid) break;
+				
 				cnt+=(mid/arr[i]);
 			}
 			if(cnt>=M) {
-				ans = Math.min(ans,mid);
 				max=mid-1;
+				ans = Math.min(ans,mid);
 			}
 			else min=mid+1;
 		}
