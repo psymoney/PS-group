@@ -9,8 +9,8 @@ public class BOJ_20115 {
 		
 		int N = Integer.parseInt(br.readLine());
 		String str[] = br.readLine().split(" ");
-		
 		long arr[] = new long[N];
+		
 		for(int i=0;i<N;i++) {
 			arr[i]=Long.parseLong(str[i]);
 		}
