@@ -6,6 +6,11 @@ const [N, M] = input.shift().split(' ').map(BigInt)
 let A = input.map(Number)
 
 
+// 0 ~ 100
+// ~48 false 49~ true
+
+
+
 const solution = () => {
   const bigInt = binarySearch()
   
@@ -19,7 +24,7 @@ const solution = () => {
     while (left < right) {
       const mid = (right + left) / 2n
 
-      const res = isPossible(mid)
+      const res = isPossible(mid) // 
       
       if (res) {
         right = mid
