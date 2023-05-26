@@ -39,7 +39,7 @@ public class BOJ_2606 {
 		
 		dfs(1,list,visited);
 		
-		System.out.print(cnt-1);
+		System.out.print(cnt-1); // 시작정점 제외 
 	}
 	
 	
