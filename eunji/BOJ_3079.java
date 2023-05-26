@@ -34,11 +34,10 @@ public class BOJ_3079 {
 			}
 			if(cnt>=M) {
 				max=mid-1;
-				ans = Math.min(ans,mid);
 			}
 			else min=mid+1;
 		}
 		
-		System.out.print(ans);
+		System.out.print(min);
 	}
 }
